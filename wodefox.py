@@ -91,7 +91,7 @@ def insert_output(output):
 # 清屏
 def clear_screen():
     terminal_text.delete("1.0", tk.END)
-    terminal_text.insert(tk.END, "欢迎使用 FteAPT 单兵作战工具 v0.1\n", font_bold)
+    terminal_text.insert(tk.END, "欢迎使用作战工具 v0.1\n", font_bold)
     terminal_text.insert(tk.END, "┌──(fox㉿foxes)-[~]\n└─$", "prompt")
     terminal_text.mark_set("input_start", "end-1c")
     terminal_text.see(tk.END)
@@ -155,7 +155,7 @@ def show_terminal():
     global terminal_root, ip_label, left_toolbar_frame, top_toolbar_frame, buttons_left, buttons_top, monitor_label, terminal_text, style_bg, style_fg, prompt_color, font_normal, font_bold, main_frame, terminal_frame, scrollbar, monitor_frame, context_menu
     
     terminal_root = tk.Tk()
-    terminal_root.title("FteAPT单兵作战工具 v0.1")
+    terminal_root.title("作战工具 v0.1")
     terminal_root.geometry("1000x600")  # 设置窗口大小
     
     # 加载配置
@@ -423,7 +423,7 @@ def show_terminal():
     terminal_text.config(yscrollcommand=scrollbar.set)
     
     # 插入欢迎信息
-    terminal_text.insert(tk.END, "欢迎使用 FteAPT 单兵作战工具 v0.1\n", font_bold)
+    terminal_text.insert(tk.END, "欢迎使用作战工具 v0.1\n", font_bold)
     terminal_text.tag_configure("prompt", foreground=prompt_color, font=font_normal)
     terminal_text.insert(tk.END, "┌──(fox㉿foxes)-[~]\n└─$", "prompt")
     terminal_text.mark_set("input_start", "end-1c")
